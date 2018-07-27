@@ -1,0 +1,24 @@
+﻿@model HelperMethods.Models.Produto
+@*Arquivo Produtos.cshtml com helper customizado*@
+@using HelperMethods.Infraestrutura
+
+@{
+    ViewBag.Title = "Produto";
+}
+
+<h2>Produto</h2>
+
+<body>
+    @Html.ListarItens((List<HelperMethods.Models.Produto>)ViewBag.Dados)
+
+    @*@*Código para exibição de produtos
+    <div>
+        @foreach (HelperMethods.Models.Produto p in (List<HelperMethods.Models.Produto>)ViewBag.Dados)
+        {
+            <h3>@p.Nome</h3>
+            <h4>@p.Valor</h4>
+            <h5>@p.Descricao</h5>
+        }
+    </div>*@
+</body>
+

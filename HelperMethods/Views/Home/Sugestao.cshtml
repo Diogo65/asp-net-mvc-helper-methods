@@ -1,0 +1,43 @@
+﻿@model HelperMethods.Models.Sugestao
+
+@{
+    ViewBag.Title = "Sugestao";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Sugestoes</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div>
+                <label>Id</label>
+                @Html.Label("Id")
+                @Html.EditorFor(s => s.Id)
+            </div>
+            <div>
+                <label>Nome</label>
+                @Html.Label("Nome")
+                @Html.EditorFor(s => s.Nome)
+            </div>
+            <div>
+                <label>Email</label>
+                @Html.Label("Email")
+                @Html.EditorFor(s => s.Email)
+            </div>
+            <div>
+                <label>Descricao</label>
+                @Html.Label("Descrição")
+                @Html.TextArea("descrição", Model.Descricao)
+            </div>
+            <input type="submit" value="Enviar" />
+        }
+    </div>
+</body>
+</html>
+
